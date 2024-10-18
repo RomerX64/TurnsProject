@@ -1,0 +1,56 @@
+.Turn{
+    margin: 2% 3% ;
+    width: auto;
+    height: 5vw;
+    background-color: #6A92CC ;
+    display: flex;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+}
+.type{
+    margin: auto;
+    font-size: large;
+    font-style: oblique;
+}
+.date{
+    margin: auto;
+    font-size: larger;
+}
+.Pending{
+    margin: auto;
+    font-size: large;
+    color: #16fe72ce;
+ 
+}
+.Cancel{
+    margin: auto;
+    font-size: large;
+    color: #fe1616ce
+}
+.buttonCancelPending{
+    margin: auto;
+    font-size: smalls;
+    border: none;
+    background-color: #064fbd75;
+    height: 60%;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px black;
+}
+.buttonCancelCancel{
+    margin: auto;
+    font-size: small;
+    border: none;
+    background-color: #064fbd2a;
+    height: 60%;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.buttonCancelPending:hover{
+    cursor: pointer;
+    background-color: #064fbdce;
+}
+.buttonCancelCancel:hover{
+    cursor:not-allowed ;
+    background-color: #064fbd70;
+}

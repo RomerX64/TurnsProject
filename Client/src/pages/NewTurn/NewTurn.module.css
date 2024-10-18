@@ -1,0 +1,52 @@
+.newTurns{
+    width: 50vw;
+    height: fit-content;
+    margin: auto;
+    margin-top: .5vw;
+    background-color: #D5C5E9;
+    border: 3px;
+    border-style: solid;
+    border-color: #50293C;
+    display: grid;
+}
+.type{
+    
+    margin: .5vw;
+    height: 5vw;
+    font-size: large;
+    font-size: 3vw;
+    color: rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+}
+.date{
+    margin-top: .5vw;
+    margin: .5vw;
+    opacity: .7;
+    height: 15vw;
+    font-size: large;
+    font-size: 5vw; 
+    color: rgba(0, 0, 0, 0.7);
+}
+.submiti{
+    background-color: #706fabc8;
+    color: rgba(0, 0, 0, 0.774);
+    border-radius: 100px;
+    border: none;
+    margin: auto;
+    margin-bottom: .5vw;
+    width: 12vw;
+    height: 5vw;
+    box-shadow: 0px 0px 20px;
+    font-size: 2.5vw;
+}
+.submiti:hover{
+    transform: scale(1.1);
+    transition: .3s;
+    cursor: pointer;
+    
+}
+.submiti:disabled{
+    opacity: .3;
+    cursor: not-allowed;
+    box-shadow: 0px 0px 20px;
+}

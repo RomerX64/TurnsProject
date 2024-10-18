@@ -1,0 +1,31 @@
+.Board{
+    margin-top: 0.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    height: 75vh;
+    background-color: #D5C5E9  ;
+    border: 3px;
+    border-style: solid;
+    border-color: #50293C;
+    width: 60vw;
+    overflow-y: auto;
+    overflow-y: scroll;
+}
+.Board::-webkit-scrollbar {
+    width: 5px; 
+}
+  
+.Board::-webkit-scrollbar-thumb {
+    background: #706fabc6; 
+    border-radius: 10px;
+}
+  
+.Board::-webkit-scrollbar-thumb:hover {
+    background: #706fab; 
+}
+  
+.Board::-webkit-scrollbar-track {
+    background: #706fab2c; 
+    border-radius: 10px; 
+}

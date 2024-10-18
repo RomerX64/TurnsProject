@@ -1,0 +1,31 @@
+.HomeBody{
+  margin-top: 0.5vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  height: 75vh;
+  background-color: #D5C5E9  ;
+  border: 3px;
+  border-style: solid;
+  border-color: #50293C;
+  width: 50vw;
+  overflow-y: auto;
+  overflow-y: scroll;
+}
+.HomeBody::-webkit-scrollbar {
+  width: 5px; 
+}
+
+.HomeBody::-webkit-scrollbar-thumb {
+  background: #706fabc6; 
+  border-radius: 10px;
+}
+
+.HomeBody::-webkit-scrollbar-thumb:hover {
+  background: #706fab; 
+}
+
+.HomeBody::-webkit-scrollbar-track {
+  background: #706fab2c; 
+  border-radius: 10px; 
+}
