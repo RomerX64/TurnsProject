@@ -42,11 +42,9 @@ const MyTurnsBoard = () => {
     if (loading) return <div>Cargando Turnos ...</div>;
     
     const PendingCancel = (arr)=>{
-        const pending = arr.filter((turn)=>turn.status === true)
-        const cancels = arr.filter((turn)=>turn.status !== true)
         const orders = []
-        pending.map((turn)=> (orders.push(turn)))
-        cancels.map((turn)=> (orders.push(turn)))
+
+        arr.forEach((turn)=> {turn.status ? orders.unshift(turn) : orders.push(turn)})
         return orders
     }
     const TurnsOrders = PendingCancel(MyTurns)
