@@ -31,19 +31,20 @@ export const UserProvider = ({children})=>{
             }
                 const usuario = await response.json()
             setUser(usuario)
-            navigate('/home')
             setWhere('/home')   
-            return 
+            navigate('/home')
+        
         } catch (error) {
             alert(error.message)
         }
     }
-    
+
     const value ={
         user,
         GetUser,
         where,
-        setWhere
+        setWhere,
+        setUser
 
     }
   

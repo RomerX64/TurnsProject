@@ -1,11 +1,14 @@
+import { UserContext } from '../contexts/UserContext';
 import { validateRegistro } from '../helpers/validate';
 import styles from './styles/RegisterInputs.module.css';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const RegisterInputs = () => {
+    const {setUser, setWhere} = useContext(UserContext)
+    setWhere('/')
+    const navigate = useNavigate()
     const [userData, setUserData] = useState({
         name:'',
         email:'',
@@ -22,6 +25,30 @@ const RegisterInputs = () => {
         username:'',
         password:'',
     })
+    const MakeUser = async({name, email, address, birthdate, username, password})=>{
+        console.log({name, email, address, birthdate, username, password});
+        
+        try {
+            const res = await fetch('http://localhost:3000/users/new',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({name, email, address, birthdate, username, password}),
+            })
+            if(!res.ok)throw new Error('No se pudo crear el usuario')
+                console.log(res);
+                
+            const NewUser = await res.json()
+            setUser(NewUser)
+            setWhere('/home')
+            navigate('/home')
+            return alert('Se pudo crear su usuario')
+            } catch (error) {                
+            alert(error.message)
+        }
+    }
+    
 
 
     const handleOnChange = (event)=>{
@@ -35,7 +62,7 @@ const RegisterInputs = () => {
 
     const handleOnSubmit = (event)=>{
         event.preventDefault()
-        alert(`${userData.username} ${userData.password}`)
+        MakeUser(userData)
     }
 
     return(
@@ -100,11 +127,11 @@ const RegisterInputs = () => {
                 Your birthdate:
             </label>
                 <input
-                    type="date"
+                    type="text"
                     value={userData.birthdate}
                     name='birthdate'
                     onChange={handleOnChange}
-                    placeholder='dd/mm/aaaa'
+                    placeholder='dd-mm-aaaa'
                     
                     />
                 {errors.birthdate && <p>{errors.birthdate}</p>}

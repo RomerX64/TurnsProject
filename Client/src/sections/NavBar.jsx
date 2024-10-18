@@ -24,8 +24,8 @@ const NavBar = () =>{
             <Link to='/newTurn'className={styles.RutersLinks}>
             <button className={styles.Ruters}>Nuevo Turno</button>
             </Link>
-            <Link to='/abautUs' className={styles.RutersLinks}>
-            <button className={styles.Ruters}>Abaut us</button>
+            <Link to='/eliminar' className={styles.RutersLinks}>
+            <button className={styles.Ruters}>Your Accunt</button>
             </Link>
             </div>
         </div>

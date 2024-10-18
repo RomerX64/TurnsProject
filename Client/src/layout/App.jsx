@@ -7,6 +7,7 @@ import  MysTurnsBoard  from "../pages/TurnsBoard/MyTurnsBoard";
 import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
 import NewTurns from '../pages/NewTurn/NewTurn'
+import EliminarUser from "../pages/EliminarUser/EliminarUser";
 
 
 const App = () => {
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/home" element={<Home/>}/>
           <Route path="/turns" element={<MysTurnsBoard/>}/>
           <Route path="/newTurn" element={<NewTurns/>}/>
+          <Route path="/eliminar" element={<EliminarUser/>}/>
+
         </Routes>
         </>
     );
